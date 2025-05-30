@@ -1,31 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>GVMAGs V2</title>
+  <meta charset="UTF-8" />
+  <title>Giant Virus MAGs v2</title>
+
+  <!--–– Quick, minimal styling ––-->
   <style>
-    body{font-family:Arial,Helvetica,sans-serif;max-width:850px;margin:40px auto;line-height:1.6;color:#222}
-    h1{font-size:2em;margin-top:0}
-    ul{padding-left:20px}
-    a{color:#0066cc;text-decoration:none}
-    a:hover{text-decoration:underline}
-    footer{margin-top:40px;font-size:0.9em;color:#555}
+    /* Layout & typography */
+    body {
+      font-family: system-ui, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      color: #333;
+    }
+
+    /* Headings */
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+    h1 .ver {
+      font-weight: 300;
+      font-size: 1.5rem;
+    }
+    h2 {
+      margin-top: 2.5rem;
+      font-size: 1.4rem;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.4rem;
+    }
+
+    /* Download list */
+    ul.downloads {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    ul.downloads li {
+      margin-bottom: 1.5rem;
+      background: #fafafa;
+      border-left: 4px solid #4a90e2;
+      padding: 1rem 1.2rem;
+    }
+    ul.downloads strong {
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    ul.downloads a {
+      color: #4a90e2;
+      text-decoration: none;
+    }
+    ul.downloads a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footnote */
+    .footnote {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 3rem;
+    }
   </style>
 </head>
 <body>
 
-<!-- G I A N T V I R U S M A G s – V e r s i o n 2 --> <h1>Giant Virus MAGs&nbsp;<span style="font-weight:300;">(GVMAGs) v2</span></h1> <p> Welcome to the second release of the Giant Virus MAGs resource&mdash;a curated hub of genomes, protein families and phylogenies that shines a light on the extraordinary world of Nucleocytoviricota. Whether you’re tracking hallmark genes, benchmarking a new pipeline, or simply marveling at the viral giants’ evolutionary sprawl, everything you need starts here. </p> <p> All methods, file formats and naming rules are described in our companion preprint. Feedback and citations are always appreciated! <a href="linkhere" target="_blank">Read the preprint</a>. </p> <h2>Download &amp; Explore</h2> <ul> <li><strong>Interactive reference tree + taxonomy</strong><br> Zoom through 2 k + genomes on iTOL and grab the full metadata table.<br> ↳ <a href="https://itol.embl.de/your_tree_link" target="_blank">Open tree in iTOL</a> | <a href="https://example.com/annotated_genomes_spreadsheet.xlsx" target="_blank">Download spreadsheet</a> </li> <li><strong>Genome &amp; protein FASTA bundles</strong><br> Includes per-family folders and TSVs with provenance and quality scores.<br> ↳ <a href="https://example.com/genomes_and_proteins.zip" target="_blank">Download genomes + proteins</a> </li> <li><strong>GVOG HMM library</strong><br> 24 k Hidden-Markov models covering every orthologous group in v2.<br> ↳ <a href="https://example.com/gvogs_hmms.tar.gz" target="_blank">Download HMMs</a> </li> <li><strong>Marker alignments &amp; phylogenetic trees</strong><br> Ready-to-use IQ-TREE, RAxML and FastTree outputs plus the underlying MSAs.<br> ↳ <a href="https://example.com/trees_and_alignments.zip" target="_blank">Download package</a> </li> </ul> <p style="font-size:0.9em; color:#666;"> <em>Version 2 released May&nbsp;2024. Earlier releases are archived <a href="#">here</a>. Spot an issue? Open a ticket on GitHub or drop us an email.</em> </p>
+  <!-- G I A N T   V I R U S   M A G s – Version 2 -->
+  <h1>Giant Virus MAGs <span class="ver">v2</span></h1>
 
-<h2>Reference</h2>
+  <p>
+    Welcome to the second release of the Giant Virus MAGs resource&mdash;a curated hub of
+    genomes, protein families and phylogenies that shines a light on the extraordinary
+    world of Nucleocytoviricota.
+    Whether you&rsquo;re tracking hallmark genes, benchmarking a pipeline or simply
+    marvelling at viral giants&rsquo; evolutionary sprawl, everything you need starts here.
+  </p>
+
+  <p>
+    For full methods, file formats and naming rules, see our companion preprint.
+    Feedback and citations are always appreciated!
+    <a href="linkhere" target="_blank">Read the preprint</a>.
+  </p>
+
+  <h2>Download &amp; Explore</h2>
+
+  <ul class="downloads">
+    <li>
+      <strong>Interactive reference tree + taxonomy</strong>
+      Zoom through 2 k+ genomes on iTOL and grab the full metadata table.<br>
+      &rarr; <a href="https://itol.embl.de/your_tree_link" target="_blank">Open tree in iTOL</a> |
+      <a href="https://example.com/annotated_genomes_spreadsheet.xlsx" target="_blank">Download spreadsheet</a>
+    </li>
+
+    <li>
+      <strong>Genome &amp; protein FASTA bundles</strong>
+      Includes per-family folders and TSVs with provenance and quality scores.<br>
+      &rarr; <a href="https://example.com/genomes_and_proteins.zip" target="_blank">Download genomes + proteins</a>
+    </li>
+
+    <li>
+      <strong>GVOG HMM library</strong>
+      24 k Hidden-Markov models covering every orthologous group in v2.<br>
+      &rarr; <a href="https://example.com/gvogs_hmms.tar.gz" target="_blank">Download HMMs</a>
+    </li>
+
+    <li>
+      <strong>Marker alignments &amp; phylogenetic trees</strong>
+      Ready-to-use IQ-TREE, RAxML and FastTree outputs plus the underlying MSAs.<br>
+      &rarr; <a href="https://example.com/trees_and_alignments.zip" target="_blank">Download package</a>
+    </li>
+  </ul>
+
+  <h2>Reference</h2>
 <p>GVMAGs V2.<br>
 Yumary M. Vasquez, Tiago Nardi, Tomáš Brůna, Juan C. Villada, Marianne Buscaglia, Miguel F. Romero, Frederik Schulz. 2025. BioRxiv.<br>
 <a href="will be updated ">doi link</a></p>
 
-<h2>Contact</h2>
-<p>For questions or comments please contact Yumary Vasquez at <em>ymvasquez&nbsp;at&nbsp;lbl&nbsp;dot&nbsp;gov</em></p>
+  <p class="footnote">
+    <em>
+    <a href="#">here</a>. For questions or comments please contact Yumary Vasquez.</em>
+  </p>
 
-<footer>
-</footer>
+
+
+
+
+
 
 </body>
 </html>
